@@ -1,0 +1,770 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4eee7;
+    color: #29231f;
+    overflow-x: hidden;
+}
+
+img,
+video {
+    max-width: 100%;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    width: 100%;
+    min-height: 100svh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: clamp(30px, 5vw, 70px);
+
+    background:
+        radial-gradient(
+            circle at 70% 50%,
+            #071b27 0%,
+            #02080d 48%,
+            #000000 100%
+        );
+
+    color: white;
+}
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.hero-content {
+    width: 100%;
+    max-width: 1400px;
+
+    display: flex;
+    align-items: center;
+
+    gap: clamp(20px, 4vw, 70px);
+}
+
+
+/* =========================================
+   FOTO PROFIL
+========================================= */
+
+.profile-photo {
+    width: clamp(280px, 38vw, 520px);
+    aspect-ratio: 1.28 / 1;
+
+    position: relative;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    background: #111;
+
+    border-radius: 0 200px 200px 0;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =========================================
+   PORTFOLIO TITLE
+========================================= */
+
+.portfolio-title {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+
+    min-width: 0;
+}
+
+.title-row {
+    width: 100%;
+}
+
+.title-row h1 {
+    font-family:
+        Impact,
+        Haettenschweiler,
+        "Arial Narrow Bold",
+        sans-serif;
+
+    font-size: clamp(55px, 8vw, 150px);
+
+    line-height: 0.9;
+
+    letter-spacing: 1px;
+
+    color: rgba(178, 188, 206, 0.521);
+
+    text-shadow:
+        2px 3px 0 #777b80;
+
+    white-space: nowrap;
+}
+
+.title-row span {
+    font-family: Georgia, serif;
+
+    font-size: clamp(20px, 3vw, 45px);
+
+    color: #d4d6d9;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   MENU
+========================================= */
+
+.menu {
+    position: absolute;
+
+    left: 50%;
+    bottom: clamp(25px, 5vh, 50px);
+
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 14px;
+}
+
+.menu button {
+    border: none;
+
+    background: transparent;
+
+    color: #aaa;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    min-width: 80px;
+
+    transition: 0.3s;
+}
+
+.menu button:hover {
+    color: white;
+    transform: scale(1.08);
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro {
+    width: 100%;
+
+    padding:
+        clamp(70px, 9vw, 120px)
+        clamp(20px, 7vw, 100px)
+        clamp(60px, 8vw, 90px);
+
+    background: #f4eee7;
+}
+
+.small-title {
+    font-size: clamp(10px, 1vw, 12px);
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    color: #8b6249;
+
+    margin-bottom: 20px;
+}
+
+.intro h2 {
+    font-size: clamp(45px, 8vw, 100px);
+
+    line-height: 0.95;
+
+    font-weight: 800;
+
+    letter-spacing: clamp(-4px, -0.3vw, -2px);
+
+    margin-bottom: 30px;
+}
+
+.intro-description {
+    width: 100%;
+    max-width: 600px;
+
+    font-size: clamp(14px, 1.4vw, 17px);
+
+    line-height: 1.7;
+
+    color: #716861;
+}
+
+
+/* =========================================
+   PORTFOLIO SECTION
+========================================= */
+
+.portfolio-section {
+    width: 100%;
+
+    padding:
+        clamp(60px, 7vw, 90px)
+        0
+        clamp(70px, 8vw, 100px);
+
+    border-top:
+        1px solid rgba(41, 35, 31, 0.12);
+}
+
+
+/* =========================================
+   SECTION HEADER
+========================================= */
+
+.section-header {
+    width: 100%;
+
+    padding:
+        0
+        clamp(20px, 7vw, 100px);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    gap: 30px;
+
+    margin-bottom: 40px;
+}
+
+.section-number {
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #8b6249;
+
+    margin-bottom: 10px;
+}
+
+.section-header h2 {
+    font-size: clamp(38px, 5vw, 65px);
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+}
+
+.section-description {
+    width: 100%;
+    max-width: 300px;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    color: #716861;
+}
+
+
+/* =========================================
+   HORIZONTAL GALLERY
+========================================= */
+
+.horizontal-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding:
+        0
+        clamp(20px, 7vw, 100px)
+        15px;
+
+    scrollbar-width: none;
+
+    -ms-overflow-style: none;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+.horizontal-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* =========================================
+   DESIGN LIST
+========================================= */
+
+.design-list {
+    display: flex;
+
+    flex-direction: row;
+
+    gap: clamp(18px, 2.5vw, 30px);
+
+    width: max-content;
+}
+
+
+/* =========================================
+   DESIGN CARD
+========================================= */
+
+.design-card {
+    width: clamp(230px, 28vw, 350px);
+
+    flex: 0 0 clamp(230px, 28vw, 350px);
+}
+
+
+/* =========================================
+   DESIGN IMAGE
+========================================= */
+
+.design-image {
+    width: 100%;
+
+    aspect-ratio: 4 / 5;
+
+    overflow: hidden;
+
+    background: #ded5cc;
+}
+
+.design-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.design-card:hover .design-image img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================
+   CARD INFO
+========================================= */
+
+.card-info {
+    padding-top: 18px;
+}
+
+.card-info span {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+
+    color: #8b6249;
+}
+
+.card-info h3 {
+    font-size: clamp(18px, 1.8vw, 22px);
+
+    margin: 8px 0;
+
+    font-weight: 700;
+}
+
+.card-info p {
+    width: 100%;
+    max-width: 300px;
+
+    font-size: clamp(12px, 1.2vw, 13px);
+
+    line-height: 1.6;
+
+    color: #716861;
+}
+
+
+/* =========================================
+   VIDEO SECTION
+========================================= */
+
+.video-section {
+    background: #ebe3da;
+}
+
+
+/* =========================================
+   VIDEO LIST
+========================================= */
+
+.video-list {
+    display: flex;
+
+    flex-direction: row;
+
+    gap: clamp(18px, 2.5vw, 30px);
+
+    width: max-content;
+}
+
+
+/* =========================================
+   VIDEO CARD
+========================================= */
+
+.video-card {
+    width: clamp(300px, 40vw, 500px);
+
+    flex: 0 0 clamp(300px, 40vw, 500px);
+}
+
+
+/* =========================================
+   VIDEO
+========================================= */
+
+.video-container {
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    background: #1d1917;
+
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    width: 100%;
+
+    padding:
+        35px
+        clamp(20px, 7vw, 100px);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-top:
+        1px solid rgba(41, 35, 31, 0.15);
+
+    background: #f4eee7;
+
+    color: #716861;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        min-height: 100svh;
+
+        padding: 40px 5%;
+    }
+
+    .hero-content {
+        gap: 25px;
+    }
+
+    .profile-photo {
+        width: 40vw;
+        max-width: 380px;
+
+        aspect-ratio: 1.15 / 1;
+    }
+
+    .title-row h1 {
+        font-size: clamp(55px, 9vw, 90px);
+    }
+
+    .section-header {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .horizontal-wrapper {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .intro {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .footer {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+
+/* =========================================
+   HP
+========================================= */
+
+@media (max-width: 600px) {
+
+    /* HERO */
+
+    .hero {
+        min-height: 100svh;
+
+        padding: 30px 5%;
+    }
+
+    .hero-content {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        justify-content: center;
+
+        gap: 25px;
+    }
+
+
+    /* FOTO */
+
+    .profile-photo {
+        width: min(72vw, 280px);
+
+        aspect-ratio: 1 / 1;
+
+        border-radius: 0 90px 90px 0;
+    }
+
+
+    /* JUDUL */
+
+    .portfolio-title {
+        width: 100%;
+    }
+
+    .title-row h1 {
+        font-size: clamp(45px, 14vw, 75px);
+
+        letter-spacing: 0;
+    }
+
+
+    /* MENU */
+
+    .menu {
+        bottom: 30px;
+    }
+
+
+    /* INTRO */
+
+    .intro {
+        padding:
+            70px 5%
+            60px;
+    }
+
+    .intro h2 {
+        font-size: clamp(45px, 14vw, 60px);
+
+        letter-spacing: -3px;
+    }
+
+    .intro-description {
+        font-size: 14px;
+    }
+
+
+    /* SECTION HEADER */
+
+    .section-header {
+        display: block;
+
+        padding:
+            0 5%;
+
+        margin-bottom: 30px;
+    }
+
+    .section-header h2 {
+        font-size: clamp(38px, 11vw, 55px);
+    }
+
+    .section-description {
+        margin-top: 15px;
+
+        max-width: 350px;
+    }
+
+
+    /* GALERI */
+
+    .horizontal-wrapper {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+
+    /* DESAIN */
+
+    .design-card {
+        width: min(72vw, 280px);
+
+        flex: 0 0 min(72vw, 280px);
+    }
+
+
+    /* VIDEO */
+
+    .video-card {
+        width: min(85vw, 380px);
+
+        flex: 0 0 min(85vw, 380px);
+    }
+
+
+    /* CARD */
+
+    .card-info h3 {
+        font-size: 19px;
+    }
+
+    .card-info p {
+        font-size: 12px;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        padding:
+            30px 5%;
+
+        display: block;
+
+        line-height: 2;
+    }
+}
+
+
+/* =========================================
+   HP SANGAT KECIL
+========================================= */
+
+@media (max-width: 400px) {
+
+    .hero {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .profile-photo {
+        width: min(70vw, 240px);
+    }
+
+    .title-row h1 {
+        font-size: 40px;
+    }
+
+    .intro h2 {
+        font-size: 44px;
+    }
+
+    .design-card {
+        width: 220px;
+
+        flex-basis: 220px;
+    }
+
+    .video-card {
+        width: 290px;
+
+        flex-basis: 290px;
+    }
+}
+
+
+/* =========================================
+   LAYAR SANGAT BESAR
+========================================= */
+
+@media (min-width: 1600px) {
+
+    .hero-content {
+        max-width: 1500px;
+    }
+
+    .profile-photo {
+        width: 520px;
+    }
+
+    .title-row h1 {
+        font-size: 180px;
+    }
+}
