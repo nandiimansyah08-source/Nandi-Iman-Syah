@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Portofolio - Nandi
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <style>
+        /* NAVIGASI HALAMAN (tambahan, style.css tidak diubah) */
+        .page[hidden] { display: none !important; }
+
+        #page-home .hero { border-bottom: none; }
+
+        .home-menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+            padding: 10px 7% 70px;
+        }
+
+        .home-menu button,
+        .back-btn {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 0.07);
+            color: #ffffff;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            padding: 12px 28px;
+            min-width: 240px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .home-menu button:hover,
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.18);
+            transform: translateY(-3px);
+        }
+
+        .back-bar { padding: 25px 7% 0; }
+
+        .back-btn {
+            min-width: 0;
+            padding: 10px 20px;
+            font-size: 12px;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================
+         HALAMAN UTAMA (PROFIL + PORTOFOLIO + MENU)
+    ===================================== -->
+
+    <div class="page" id="page-home">
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <!-- FOTO PROFIL PERTAMA -->
+                <div class="profile-photo">
+                    <img src="images/profile.png" alt="Foto Profil">
+                </div>
+
+                <!-- PORTFOLIO -->
+                <div class="portfolio-title">
+                    <div class="title-row">
+                        <h1>PORTOFOLIO</h1>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- MENU UTAMA -->
+        <nav class="home-menu">
+            <button type="button" data-page="biodata">Biodata</button>
+            <button type="button" data-page="karya">Daftar Karya / Proyek</button>
+        </nav>
+
+    </div>
+
+
+    <!-- =====================================
+         HALAMAN BIODATA
+    ===================================== -->
+
+    <div class="page" id="page-biodata" hidden>
+
+        <div class="back-bar">
+            <button type="button" class="back-btn" data-page="home">&larr; Kembali ke Halaman Utama</button>
+        </div>
+
+        <!-- =====================================
+             ABOUT
+        ===================================== -->
+
+        <section class="about-section">
+
+            <div class="about-content">
+
+                <div class="about-intro">
+                    <p class="about-greeting">I AM</p>
+                    <h2>NANDI IMAN SYAH</h2>
+                    <p class="about-role">DESIGN &amp; VIDEO EDITOR</p>
+                </div>
+
+                <!-- ABOUT ME -->
+                <div class="about-block">
+                    <h3>ABOUT ME</h3>
+                    <p>
+                        I have a strong interest in graphic design, video editing, technology, and creative development. 
+                        I enjoy creating various visual works and continuously learning to improve my skills in the digital field.
+                    </p>
+                </div>
+
+                <!-- SOFTWARE -->
+                <div class="about-block">
+                    <h3>SOFTWARE SKILLS</h3>
+
+                    <div class="software-list">
+
+                        <div class="software-item">
+                            <img src="images/canva.jpg" alt="Canva">
+                        </div>
+
+                        <div class="software-item">
+                            <img src="images/snapseed.png" alt="Snapseed">
+                        </div>
+
+                        <div class="software-item">
+                            <img src="images/capcut.png" alt="CapCut">
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- INFORMATION -->
+                <div class="about-info-grid">
+
+                    <!-- EDUCATION -->
+                    <div class="about-block">
+                        <h3>EDUCATION</h3>
+                        <p>
+                            <strong>2023 - 2026</strong>
+                            <br>
+                            SMAN 1 PLUMBON
+                        </p>
+                    </div>
+
+                    <!-- EXPERIENCE -->
+                    <div class="about-block">
+                        <h3>EXPERIENCE</h3>
+                        <p>
+                            Design &amp; Video Editing
+                            <br>
+                            Creative Project
+                            <br>
+                            Digital Content
+                        </p>
+                    </div>
+
+                    <!-- LANGUAGE -->
+                    <div class="about-block">
+                        <h3>LANGUAGE</h3>
+                        <p>INDONESIAN</p>
+                        <p>ENGLISH</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- =====================================
+         HALAMAN DAFTAR KARYA / PROYEK (HASIL DESAIN)
+    ===================================== -->
+
+    <div class="page" id="page-karya" hidden>
+
+        <div class="back-bar">
+            <button type="button" class="back-btn" data-page="home">&larr; Kembali ke Halaman Utama</button>
+        </div>
+
+        <section class="portfolio-section">
+
+            <div class="section-header">
+                <div>
+                    <h2>My Project Desain</h2>
+                    <p class="section-subtitle">Template Canva</p>
+                </div>
+            </div>
+
+            <div class="horizontal-wrapper">
+
+                <div class="design-list">
+
+                    <!-- DESIGN 1 -->
+                    <article class="design-card">
+                        <div class="design-image" data-full="images/template canva 1.png">
+                            <img src="images/template canva 1.png" alt="Desain 1">
+                        </div>
+                    </article>
+
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+<!-- =====================================
+     LIGHTBOX / MODAL
+===================================== -->
+
+<div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+    <div class="lightbox-content" id="lightboxContent"></div>
+</div>
+
+
+    <script src="node.js"></script>
+
+</body>
+
+</html>
